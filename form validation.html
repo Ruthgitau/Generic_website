@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //checking whether a field is filled out
+            function validateform(){
+                let x=document.forms["mainform"]["fname"].value;
+                if(x ==""){
+                    alert("First Name must have a value");
+                    return false;
+                }
+            }
+            //verifying inputs to the password filled
+            function verifypassword(){
+                let p =document.getElementById("psd").value;
+                
+                if(p ==""){
+                    alert("password cannot be empty");
+                    return false;
+                }
+
+                if(p.length <8){
+                    alert("insert 8 or more characters");
+                    return false;
+                }
+                if (p.length >15){
+                    alert("characters cannot exceed 15");
+                    return false;
+                }
+
+
+            }
+            //verifying the correct input type
+            function verifynum(){
+                let n=document.getElementById("no").value;
+                if(isNaN(n) || n < 1 || n > 10){
+                    alert("input must be a number");
+                    return false;
+                }
+            }
+            
+            
+        </script>
+
+    </head>
+    <body>
+        <form name="mainform" onsubmit="return verifynum()">
+            <fieldset>
+            <legend>Contact Information</legend><br>
+            <label>First Name</label>
+            <input type="text", placeholder="Enter your first name" name="fname"><br><br>
+            <label>Second Name</label>
+            <input type="text", placeholder="Enter your second name"><br><br>
+            Password<input type="password" id="psd" name="password"><br><br>
+            Phone Number<input type="text" id="no" name="phone"><br><br>
+            <input type="submit" value="SUBMIT">
+            
+        </fieldset>
+        </form>
+        
+    </body>
+</html>

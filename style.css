@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+.main-header{
+    background-image:url(Images/Header\ Background.jpg);
+    background-size: cover;
+    background-color: rgba(0,0,6);
+    height: 5cm;
+}
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 30px;
+
+}
+.main-nav {
+    text-align: center;
+}
+.main-nav li{
+    display: inline;
+}
+.main-nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+.main-nav a:hover{
+    background-color: white;
+    color: black;
+}
+.main-header h1{
+    color: white;
+    text-align: center;
+    margin: 70px;
+    font-style: oblique;
+    font-size: 80px;
+    font-family: myfirstfont;
+
+}
+.container{
+    max-width: 900px;
+    margin: 0, auto;
+    padding: 0,0;
+    font-family: myfirstfont;
+}
+.bandimage{
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+.main-footer{
+    text-align: center;
+    background-color: green;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+
+}
+
+
+.main-footer h3{
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+
+
+}
+@font-face{
+    font-family: myfirstfont;
+    src:url(Fonts/Booter\ -\ Zero\ Zero.woff)format("woff"),
+    url(Fonts/Booter\ -\ Zero\ Zero.woff2)format("woff2");
+    
+}
+.shop-item{
+    margin: 30px;
+}
+.shopitem-title{
+    width: 100px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    
+}
+.shopitem-detail{
+    text-align: center;
+    display: flex;
+    padding: 5px;
+}
+.shopitem-button{
+    background-color: blue;
+    border:none;
+    border-radius: 3cm;
+    font-weight: bold;
+    color: white;
+}
+
+.shopitem-button:hover{
+    background-color: aqua;
+}
+
+.cart-row{
+    display: flex;
+}
+.cart-items{
+    width:45%;
+}
+.cart-total{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5cm;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+.cart-price{
+    width: 35%;
+    color: blueviolet;
+}
+.cart-item{
+    width: 35%;
+    color: rgb(255, 48, 186);
+}
+.cart-quantity{
+    width: 35%;
+    color: rgb(72, 209, 163);
+}
+
+
+
+.cart-total-price{
+    color: rgb(226, 35, 35);
+    font-size: 1.1cm;
+}
+
+
+
+
+    
+
+
+    
