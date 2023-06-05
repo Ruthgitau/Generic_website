@@ -109,8 +109,8 @@ function updateCartTotal(){
         var quantityelement=cartrow.getElementsByClassName('cart-quantity-input')[0]
         var price=parseFloat(priceelement.innerText.replace('$','' ))
         var quantity=quantityelement.value
-        total=total+ (price  * quantity)
+        total=total+ (price*quantity)
     }
-    total = Math.round(total * 100)/100
+    total = Math.round(total*100)/100
     document.getElementsByClassName('cart-total-price')[0].innerText='$'+ total
 }
