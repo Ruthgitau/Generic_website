@@ -9,40 +9,39 @@ else{
 function ready(){
 
     var removecartitembuttons=document.getElementsByClassName('btn-danger')
-    for(var i=0;i<removecartitembuttons.length;i++){
+    for(var i=0; i < removecartitembuttons.length;i++){
         var button=removecartitembuttons[i]
         button.addEventListener('click',removecartitem)
     }
 
+    var quantityinputs=document.getElementsByClassName('cart-quantity-input')
+    for(var i=0; i < quantityinputs.length; i++){
+        var input=quantityinputs[i]
+        input.addEventListener('change',quantitychanged)
+    }
 
-    var addtocartbuttons=document.getElementsByClassName("shopitem-button")
+
+    var addtocartbuttons=document.getElementsByClassName('shopitem-button')
     for(var i=0; i< addtocartbuttons.length; i++){
         var button=addtocartbuttons[i]
         button.addEventListener('click',addtocartclicked)
     }
 
-    
-    var quantityinputs=document.getElementsByClassName("cart-quantity-input")
-    for(var i=0;i< quantityinputs.length;i++){
-        var input=quantityinputs[i]
-        input.addEventListener('change',quantitychanged)
-    }
-
-document.getElementsByClassName("btn-purchase")[0].addEventListener("click",purchase)
+document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purchaseclicked)
 }
 
 function purchaseclicked(){
     alert('thankyou for your purchase')
     var cartitems=document.getElementsByClassName('car-items')[0]
-    while(cartitems.hasChildNodes()){
+    while(cartitems.hasChildNodes()) {
         cartitems.removeChild(cartitems.firstChild)
-    }
+    }       
     updateCartTotal()
 }
 
 function removecartitem(event){
-    var buttonclicked=event.target
-    buttonclicked.parentElement.parentElement.remove()
+    var buttonClicked=event.target
+    buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
 
@@ -67,13 +66,13 @@ function addtocartclicked(event){
 }
 
 function addItemToCart(title,price, imageSrc){
-    var cartrow=document.createElement('div')
+    var cartrow = document.createElement('div')
     cartrow.classList.add('cart-row')
     var cartitems=document.getElementsByClassName('cart-items')[0]
     var cartitemsnames=cartitems.getElementsByClassName('cart-item-title')
 
-    for (var i=0;i<cartitemsnames.length;i++){
-        if(cartnames[1].innerText==title){
+    for (var i=0; i < cartitemsnames.length; i++){
+        if(cartnames[i].innerText == title) {
             alert("this is already added to cart")
             return
         
@@ -87,7 +86,7 @@ function addItemToCart(title,price, imageSrc){
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
             <input class="cart-quantity-input" type="number" value="i"></input>
-            <button class="btn btn-danger" type="button">REMOVE</button>
+            <button class="btn-danger" type="button">REMOVE</button>
         </div>`
         
      cartrow.innerHTML=cartrowcontents
@@ -112,6 +111,6 @@ function updateCartTotal(){
         var quantity=quantityelement.value
         total=total+ (price  * quantity)
     }
-    total= Math.round(total * 100)/100
+    total = Math.round(total * 100)/100
     document.getElementsByClassName('cart-total-price')[0].innerText='$'+ total
 }
