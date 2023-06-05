@@ -30,8 +30,9 @@ function ready(){
 document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purchaseclicked)
 }
 
+
 function purchaseclicked(){
-    alert('thankyou for your purchase')
+    alert('Thankyou for your purchase')
     var cartitems=document.getElementsByClassName('car-items')[0]
     while(cartitems.hasChildNodes()) {
         cartitems.removeChild(cartitems.firstChild)
