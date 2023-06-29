@@ -31,6 +31,9 @@ document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purc
 }
 
 
+function hello(){
+    alert("hello world")
+}
 function purchaseclicked(){
     alert('Thankyou for your purchase')
     var cartitems=document.getElementsByClassName('car-items')[0]
@@ -72,8 +75,8 @@ function addItemToCart(title,price, imageSrc){
     var cartitems=document.getElementsByClassName('cart-items')[0]
     var cartitemsnames=cartitems.getElementsByClassName('cart-item-title')
 
-    for (var i=0; i < cartitemsnames.length; i++){
-        if(cartnames[i].innerText == title) {
+    for (var i=0; i< cartitemsnames.length;i++){
+        if(cartitemsnames[i].innerText == title) {
             alert("this is already added to cart")
             return
         
@@ -86,13 +89,13 @@ function addItemToCart(title,price, imageSrc){
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="i"></input>
-            <button class="btn-danger" type="button">REMOVE</button>
+            <input class="cart-quantity-input" type="number" value="1"></input>
+            <button class=" btn-danger" type="button">REMOVE</button>
         </div>`
         
      cartrow.innerHTML=cartrowcontents
      cartitems.append(cartrow)
-     cartrow.getElementsByClassName('btn-danger'[0].addEventListener('click'),removecartitem)
+     cartrow.getElementsByClassName('btn-danger')[0].addEventListener('click',removecartitem)
      cartrow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantitychanged)
 
 

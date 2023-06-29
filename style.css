@@ -116,9 +116,7 @@ body{
 .cart-row{
     display: flex;
 }
-.cart-items{
-    width:45%;
-}
+
 .cart-total{
     text-align: end;
     margin-top: 10px;
@@ -153,6 +151,22 @@ body{
 .cart-total-price{
     color: rgb(226, 35, 35);
     font-size: 1.1cm;
+}
+.cart-quantity-input{
+    height:34px;
+    width: 50px;
+    border: 1px solid blueviolet;
+    background-color: white;
+    color: black;
+    padding: 0%;
+    text-align: center;
+    font-size: 1cm;
+    margin-right: 10px;
+}
+
+.btn-purchase{
+    color: blueviolet;
+    
 }
 
 
